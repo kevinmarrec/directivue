@@ -1,0 +1,15 @@
+# Dependencies
+node_modules
+
+# Logs
+*.log*
+
+# IDE
+.idea
+.vscode
+
+# Other
+.nuxt*
+
+# Dist folder
+dist

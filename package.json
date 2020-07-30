@@ -1,0 +1,25 @@
+{
+  "name": "nuxt-ripple",
+  "version": "1.0.0",
+  "author": "Kevin Marrec",
+  "license": "MIT",
+  "private": true,
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn clean && tsc && copyfiles -u 1 src/**/*.css dist",
+    "clean": "rimraf dist",
+    "demo": "yarn build && yarn nuxt demo"
+  },
+  "devDependencies": {
+    "@nuxt/types": "latest",
+    "@nuxtjs/eslint-config-typescript": "latest",
+    "@nuxtjs/tailwindcss": "latest",
+    "copyfiles": "latest",
+    "eslint": "latest",
+    "nuxt": "latest",
+    "typescript": "latest"
+  }
+}

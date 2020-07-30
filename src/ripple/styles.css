@@ -1,0 +1,9 @@
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: .3;
+  background: currentColor;
+  transition: all .3s ease-out;
+}
+
