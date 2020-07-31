@@ -1,9 +1,15 @@
 {
-  "name": "@kevinmarrec/directives",
-  "version": "1.0.0",
-  "author": "Kevin Marrec",
+  "name": "directivue",
+  "version": "0.0.1",
+  "contributors": [
+    {
+      "name": "Kevin Marrec (@kevinmarrec)"
+    },
+    {
+      "name": "Erwan Jugand (@erwanjugand)"
+    }
+  ],
   "license": "MIT",
-  "private": true,
   "main": "dist/index.js",
   "files": [
     "dist"

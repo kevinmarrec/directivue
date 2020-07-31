@@ -1,2 +1,3 @@
-# ripplex
-Optimized Ripple Effect for the Web
+# directivue
+
+Optimized **Vue Directives** for your Vue projects
