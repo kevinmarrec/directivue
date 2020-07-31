@@ -59,7 +59,7 @@ const RippleDirective: DirectiveOptions = {
     el.style.position = 'relative'
     el.style.overflow = 'hidden'
 
-    el.addEventListener(('ontouchstart' in window || navigator.maxTouchPoints) ? 'touchstart' : 'mousedown', event => createRipple(el, event))
+    el.addEventListener(('ontouchstart' in window || navigator.maxTouchPoints) ? 'touchstart' : 'mousedown', event => createRipple(el, event), { passive: true })
   }
 }
 
