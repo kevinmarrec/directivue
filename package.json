@@ -1,6 +1,14 @@
 {
   "name": "directivue",
   "version": "0.0.1",
+  "description": "Lightweight and Optimized Vue Directives for your Vue projects",
+  "keywords": [
+    "vue",
+    "vue.js",
+    "vuejs",
+    "vue directive",
+    "directive"
+  ],
   "contributors": [
     {
       "name": "Kevin Marrec (@kevinmarrec)"
