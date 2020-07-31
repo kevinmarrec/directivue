@@ -19,9 +19,9 @@ npm install directivue
 
 ```ts
 import Vue from 'vue'
-import { ClickOutside, /* Ripple, ... */ } from 'directivue'
+import { ClickOutside, Ripple, /* ... */ } from 'directivue'
 
 Vue.directive('clickOutside', ClickOutside)
-// Vue.directive('ripple', Ripple)
+Vue.directive('ripple', Ripple)
 // ...
 ```
