@@ -28,3 +28,5 @@ Vue.directive('clickOutside', ClickOutside)
 Vue.directive('ripple', Ripple)
 // ...
 ```
+
+Directives are then accessible in your **Vue** templates as `v-click-outside`, `v-ripple` and so on.
