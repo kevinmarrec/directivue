@@ -25,7 +25,7 @@
   "scripts": {
     "build": "yarn clean && tsc && copyfiles -u 1 src/**/*.css dist",
     "clean": "rimraf dist",
-    "demo": "cd demo && yarn dev",
+    "demo:generate": "yarn build && cd demo && yarn generate",
     "postinstall": "cd demo && yarn"
   },
   "devDependencies": {
