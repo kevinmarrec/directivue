@@ -38,7 +38,6 @@ function createRipple (el: HTMLElement, event: MouseEvent | TouchEvent) {
   const stop = () => {
     setTimeout(() => {
       ripple.style.opacity = '0'
-      navigator.vibrate(200)
 
       setTimeout(() => {
         stopEvents[event.type].forEach(ev => el.removeEventListener(ev, stop))
