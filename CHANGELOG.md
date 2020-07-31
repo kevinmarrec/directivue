@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1](https://github.com/kevinmarrec/directivue/compare/v0.1.0...v0.1.1) (2020-07-31)
+
+
+### Features
+
+* autoFocus directive ([f474ae8](https://github.com/kevinmarrec/directivue/commit/f474ae80dce1e159b7bad6f42dd0665246418987))
+
+
+### Bug Fixes
+
+* use passive option for ripple ([18f2019](https://github.com/kevinmarrec/directivue/commit/18f20198c98eb860a473d7bcff3afee5e5759cdd))
+
 ## [0.1.0](https://github.com/kevinmarrec/directivue/compare/v0.0.1...v0.1.0) (2020-07-31)
 
 
