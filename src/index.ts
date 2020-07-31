@@ -1,7 +1,7 @@
-import ClickOutsideDirective from './clickOutside'
-import RippleDirective from './ripple'
+import ClickOutside from './clickOutside'
+import Ripple from './ripple'
 
 export {
-  ClickOutsideDirective,
-  RippleDirective
+  ClickOutside,
+  Ripple
 }
