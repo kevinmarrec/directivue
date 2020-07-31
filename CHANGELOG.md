@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0](https://github.com/kevinmarrec/directivue/compare/v0.0.1...v0.1.0) (2020-07-31)
+
+
+### ⚠ BREAKING CHANGES
+
+* directive imports have changed
+
+* remove 'Directive' suffix from directives exports ([a079cbb](https://github.com/kevinmarrec/directivue/commit/a079cbb1bb2701a8c1b6b4dfac42739f98d61f02))
+
 ### 0.0.1 (2020-07-31)
 
 
