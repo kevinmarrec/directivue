@@ -1,4 +1,5 @@
 import Vue from 'vue'
-import { RippleDirective } from '../../dist'
+import { AutoFocus, Ripple } from '../../dist'
 
-Vue.directive('ripple', RippleDirective)
+Vue.directive('autoFocus', AutoFocus)
+Vue.directive('ripple', Ripple)

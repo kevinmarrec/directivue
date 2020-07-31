@@ -25,15 +25,14 @@
   "scripts": {
     "build": "yarn clean && tsc && copyfiles -u 1 src/**/*.css dist",
     "clean": "rimraf dist",
-    "demo": "yarn build && yarn nuxt demo"
+    "demo": "cd demo && yarn dev",
+    "postinstall": "cd demo && yarn"
   },
   "devDependencies": {
-    "@nuxt/types": "latest",
     "@nuxtjs/eslint-config-typescript": "latest",
-    "@nuxtjs/tailwindcss": "latest",
     "copyfiles": "latest",
     "eslint": "latest",
-    "nuxt": "latest",
-    "typescript": "latest"
+    "typescript": "latest",
+    "vue": "2"
   }
 }
