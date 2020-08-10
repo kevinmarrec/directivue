@@ -25,9 +25,7 @@
   ],
   "scripts": {
     "build": "yarn clean && tsc && copyfiles -u 1 src/**/*.css dist",
-    "clean": "rimraf dist",
-    "demo:generate": "yarn build && cd demo && yarn generate",
-    "postinstall": "cd demo && yarn"
+    "clean": "rimraf dist"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "latest",
