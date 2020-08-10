@@ -1,4 +1,7 @@
 export default {
+  build: {
+    transpile: ['../dist']
+  },
   head: {
     title: 'Directivue - Demo',
     htmlAttrs: { lang: 'en' },

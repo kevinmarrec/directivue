@@ -30,3 +30,16 @@ Vue.directive('ripple', Ripple)
 ```
 
 Directives are then accessible in your **Vue** templates as `v-click-outside`, `v-ripple` and so on.
+
+## Nuxt.js
+
+
+`directivue` needs to be transpiled by Nuxt.js to get benefits of tree-shaking (only the directives you choose will be in your final bundle) :
+```js
+// nuxt.config.js
+export default {
+  build: {
+    transpile: ['directivue']
+  }
+}
+```
