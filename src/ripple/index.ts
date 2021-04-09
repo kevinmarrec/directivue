@@ -2,12 +2,17 @@ import { DirectiveOptions } from 'vue'
 import './styles.css'
 
 const stopEvents: Record<string, string[]> = {
+  keydown: ['keyup'],
   mousedown: ['mouseup', 'mouseleave'],
   touchstart: ['touchend']
 }
 
-function createRipple (el: HTMLElement, event: MouseEvent | TouchEvent) {
+let keyboardRipple = false
+
+function createRipple (el: HTMLElement, event: MouseEvent | TouchEvent | KeyboardEvent) {
   let finished = false
+  let offsetTop
+  let offsetLeft
 
   const container = el.getBoundingClientRect()
 
@@ -18,10 +23,15 @@ function createRipple (el: HTMLElement, event: MouseEvent | TouchEvent) {
 
   const transitionDuration = (+getComputedStyle(ripple).transitionDuration.slice(0, -1) * 1000)
 
-  const { clientX, clientY } = event instanceof TouchEvent ? event.touches[0] : event
-
-  const offsetTop = clientY - container.y
-  const offsetLeft = clientX - container.x
+  if (event instanceof KeyboardEvent) {
+    keyboardRipple = true
+    offsetTop = container.height / 2
+    offsetLeft = container.width / 2
+  } else {
+    const { clientX, clientY } = event instanceof TouchEvent ? event.touches[0] : event
+    offsetTop = clientY - container.y
+    offsetLeft = clientX - container.x
+  }
 
   const size = Math.sqrt(
     (container.height + Math.abs(container.height / 2 - offsetTop) * 2) ** 2 +
@@ -38,6 +48,7 @@ function createRipple (el: HTMLElement, event: MouseEvent | TouchEvent) {
   const stop = () => {
     setTimeout(() => {
       ripple.style.opacity = '0'
+      keyboardRipple = false
 
       setTimeout(() => {
         stopEvents[event.type].forEach(ev => el.removeEventListener(ev, stop))
@@ -59,6 +70,11 @@ const RippleDirective: DirectiveOptions = {
     el.style.overflow = 'hidden'
 
     el.addEventListener(('ontouchstart' in window || navigator.maxTouchPoints) ? 'touchstart' : 'mousedown', event => createRipple(el, event), { passive: true })
+    el.addEventListener('keydown', (event) => {
+      if (!keyboardRipple && ['Enter', ' '].includes(event.key)) {
+        createRipple(el, event)
+      }
+    }, { passive: true })
   }
 }
 
